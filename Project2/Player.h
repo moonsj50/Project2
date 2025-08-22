@@ -1,4 +1,4 @@
-#pragma once
+#pragma once  // 이 파일을 여러번 추가해도 문제가 없도록 해주는 지시문
 #include <string>
 
 using namespace std;
@@ -10,9 +10,25 @@ public:
 	virtual void attack() = 0;
 	void printPlayerStatus();
 
-	
+    // getter 함수
+    string getJobName();
+    string getNickname();
+    int getLevel();
+    int getHP();
+    int getMP();
+    int getPower();
+    int getDefence();
+    int getAccuracy();
+    int getSpeed();
 
-
+    // setter 함수
+    void setNickname(string nickname);
+    bool setHP(int HP);
+    bool setMP(int MP);
+    void setPower(int power);
+    void setDefence(int defence);
+    void setAccuracy(int accuracy);
+    void setSpeed(int speed);
 
 protected: // 파생클래스에서 사용할 수 있도록 private를 쓰지 않는다.
 	string job_name;
